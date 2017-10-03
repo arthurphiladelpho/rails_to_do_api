@@ -1,9 +1,12 @@
 random_name = (0...8).map { (65 + rand(26)).chr }.join
 random_title = (0...9).map { (70 + rand(26)).chr }.join
 random_body = (0...28).map { (80 + rand(26)).chr }.join
+random_pass = (0...18).map { (65 + rand(26)).chr }.join
+
 5.times do
 	User.create!(
-		name:  random_name
+		name:  random_name,
+		password: random_pass
 	)
 end
 
