@@ -23,7 +23,8 @@ end
 5.times do
 	Item.create!(
 		body:  random_name,
-		list_id: List.first.id
+		list_id: List.first.id,
+		complete: false
 	)
 end
 
